@@ -6,7 +6,7 @@ G.AddData({
     manifest: 0,
     requires:['Default dataset*'],
     sheets:{
-        'agricultura': 'https://raw.githubusercontent.com/MrLucky974/neverending-legacy-mods/refs/heads/main/agricultura/iconSheet.png'
+        'agricultura': 'https://mrlucky974.github.io/neverending-legacy-mods/agricultura/iconSheet.png'
     },
 
     func:function() {

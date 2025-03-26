@@ -6,7 +6,7 @@ G.AddData({
     manifest: 0,
     requires:['Default dataset*'],
     sheets:{
-        'shaman': 'https://raw.githubusercontent.com/MrLucky974/neverending-legacy-mods/refs/heads/main/shaman/iconSheet.png'
+        'shaman': 'https://mrlucky974.github.io/neverending-legacy-mods/shaman/iconSheet.png'
     },
 
     func:function() {
