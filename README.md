@@ -13,6 +13,6 @@ No guarantees on if or when I’ll address them, but I do appreciate the feedbac
 
 ## Installation
 1. When starting a new game, click on the blue button saying "Use Mods" on the top-right of the modal box
-2. Add ``https://raw.githubusercontent.com/MrLucky974/neverending-legacy-mods/refs/heads/main/<mod-name>/mod.js`` in a new line inside the list (replace ``<mod-name>`` by the mod you want to use).
+2. Add ``https://mrlucky974.github.io/neverending-legacy-mods/<mod-name>/mod.js`` in a new line inside the list (replace ``<mod-name>`` by the mod you want to use).
 
 Enjoy the mods!
