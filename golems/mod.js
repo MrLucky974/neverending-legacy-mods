@@ -14,7 +14,7 @@ G.AddData({
     manifest: 0,
     requires:['Default dataset*'],
     sheets:{
-        'golems': 'https://mrlucky974.github.io/NeverEnding%20Legacy%20Mods/GolemsMod/iconSheet.png'
+        'golems': 'https://raw.githubusercontent.com/MrLucky974/neverending-legacy-mods/refs/heads/main/golems/iconSheet.png'
     },
 
     func:function() {
