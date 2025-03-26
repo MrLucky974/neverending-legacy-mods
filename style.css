@@ -1,0 +1,164 @@
+:root {
+    --main-bg-color: #008080;
+}
+
+body {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    margin: 0;
+    background-color: var(--main-bg-color);
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    justify-content: center;
+    background: #fff;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+    margin: 0;
+    padding: 10px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid transparent;
+}
+
+.icon-item:hover {
+    border: 2px solid #000;
+    background-color: #BFBFBF;
+    box-shadow: inset 2px 2px white, inset -2px -2px #404040;
+}
+
+.icon-item img {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+}
+
+.icon-item span {
+    font-size: 12px;
+    margin-top: 4px;
+    color: black;
+}
+
+/* Taskbar at the bottom */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #BFBFBF; /* Windows 98 taskbar color */
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-top: 2px solid #808080;
+    box-shadow: inset 2px 2px white, inset -2px -2px #404040;
+}
+
+/* Start button */
+.start-button {
+    font-size: 14px;
+    padding: 5px 15px;
+    background-color: #BFBFBF;
+    border: 2px solid #808080;
+    box-shadow: inset 2px 2px white, inset -2px -2px #404040;
+    cursor: pointer;
+}
+
+.start-button:active {
+    box-shadow: inset -2px -2px white, inset 2px 2px #404040;
+}
+
+/* Start Menu */
+.start-menu {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 5px;
+    width: 150px;
+    background-color: #BFBFBF;
+    border: 2px solid #808080;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.start-menu.show {
+    display: block;
+}
+
+.start-menu ul {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.start-menu li {
+    padding: 5px;
+    border-bottom: 1px solid #808080;
+}
+
+.start-menu li:last-child {
+    border-bottom: none;
+}
+
+.start-menu a {
+    font-family: "Pixelated MS Sans Serif", Arial;
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 14px;
+}
+
+.start-menu li:hover {
+    background-color: rgb(129, 129, 129);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Window */
+.modal {
+    width: 400px;
+    background: #BFBFBF;
+    box-shadow: inset 2px 2px white, inset -2px -2px #404040;
+}
+
+.modal .window-body {
+    text-align: center;
+}
+
+.modal ul.tree-view {
+    font-size: 14px;
+}
+
+/* Modal Links */
+.modal .window-body a {
+    color: #000080; /* Dark blue, like classic Win98 links */
+    text-decoration: underline dashed; /* Dashed underline */
+}
+
+.modal .window-body a:hover {
+    color: #ff0000; /* Red when hovered */
+    text-decoration: underline solid; /* Solid underline on hover */
+}

@@ -1,1 +1,97 @@
-<h1>Hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeverEnding Legacy Mods by LuckiusDev</title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="window" style="width: 400px; margin: 50px auto;">
+    <div class="title-bar">
+      <div class="title-bar-text">My Mods</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+        <div class="icon-grid">
+            <a href="https://mrlucky974.github.io/neverending-legacy-mods/agricultura/mod.js" class="icon-item">
+              <img src="assets/agricultura-mod-icon.png">
+              <span>Agricultura</span>
+            </a>
+            <a href="https://mrlucky974.github.io/neverending-legacy-mods/golems/mod.js" class="icon-item">
+              <img src="assets/golems-mod-icon.png">
+              <span>Golems</span>
+            </a>
+            <a href="https://mrlucky974.github.io/neverending-legacy-mods/philosopher/mod.js" class="icon-item">
+                <img src="assets/philosopher-mod-icon.png">
+                <span>Philosopher</span>
+            </a>
+            <a href="https://mrlucky974.github.io/neverending-legacy-mods/shaman/mod.js" class="icon-item">
+                <img src="assets/shaman-mod-icon.png">
+                <span>Shaman</span>
+            </a>
+        </div>
+    </div>
+  </div>
+  
+  <div class="taskbar">
+    <button class="start-button" onclick="toggleStartMenu()">Start</button>
+    <div class="start-menu" id="startMenu">
+      <ul>
+        <li><a href="#" onclick="openModal()">About</a></li>
+        <li><a href="https://github.com/MrLucky974/neverending-legacy-mods">Source</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="window modal">
+      <div class="title-bar">
+        <div class="title-bar-text">About</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" onclick="closeModal()"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul class="tree-view">
+            <li><strong>✨ NeverEnding Legacy Mods by LuckiusDev ✨</strong></li>
+            <li>This is a collection of mods I made for the web game <a href="https://orteil.dashnet.org/legacy/">NeverEnding Legacy</a> (made by <a href="https://orteil.dashnet.org/">Orteil</a>, creator of Cookie Clicker). Mods and updates will come whenever I feel like working on them, so don’t expect a regular schedule.</li>
+        </ul>
+    </br>
+        <button onclick="closeModal()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleStartMenu() {
+      document.getElementById("startMenu").classList.toggle("show");
+    }
+
+    function openModal() {
+      document.getElementById("modalOverlay").style.display = "flex";
+      document.getElementById("startMenu").classList.remove("show");
+    }
+
+    function closeModal() {
+      document.getElementById("modalOverlay").style.display = "none";
+    }
+
+    // Close the menu if clicked outside
+    document.addEventListener("click", function(event) {
+      if (!event.target.closest(".start-button") && !event.target.closest(".start-menu")) {
+        document.getElementById("startMenu").classList.remove("show");
+      }
+    });
+
+    document.getElementById("modalOverlay").addEventListener("click", function(event) {
+      if (event.target === this) closeModal(); // Close modal when clicking outside
+    });
+  </script>
+</body>
+</html>
